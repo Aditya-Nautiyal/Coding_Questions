@@ -1,0 +1,13 @@
+function repeatedString(s, n) {
+    
+    const fullRepetitions = Math.floor(n / s.length);
+    const countOfAInS = s.split('').filter(char => char === 'a').length;
+    let totalAs = fullRepetitions * countOfAInS;
+    
+    const remainder = n % s.length;
+    const remainderAs = s.slice(0, remainder).split('').filter(char => char === 'a').length;
+    
+    totalAs += remainderAs;
+    
+    return totalAs;
+}
