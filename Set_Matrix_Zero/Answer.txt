@@ -1,0 +1,20 @@
+var setZeroes = function(matrix) {
+    let row = [], column = [];
+    let result = matrix;
+    for(let i=0 ;i < matrix.length; i++){
+        for(let j=0;j< matrix[0].length; j++){
+            if(matrix[i][j] === 0){
+                row.push(i);
+                column.push(j);
+            }
+        }
+    }
+    for(let i=0 ;i < result.length; i++){
+        for(let j=0;j< result[0].length; j++){
+            if(row.includes(i) || column.includes(j)){
+                result[i][j] = 0;
+            }
+        }
+    }
+    return result;
+};
