@@ -1,0 +1,2 @@
+const st = "One piece is real";
+console.log(st.split("").reverse().join(""))
