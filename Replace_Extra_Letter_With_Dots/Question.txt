@@ -1,0 +1,1 @@
+Write a JavaScript function that checks if a string is longer than 10 characters. If it is, truncate the string after 10 characters and append ... to the end. If it's not, return the string as it is.
