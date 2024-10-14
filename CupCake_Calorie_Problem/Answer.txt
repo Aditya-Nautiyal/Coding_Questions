@@ -1,0 +1,8 @@
+function marcsCakewalk(calorie) {
+    // Write your code here
+    const arr = calorie.sort((a,b) => b-a);
+    const result = arr.reduce((acc,value,index)=>{
+        return(acc+(Math.pow(2,index)* value))
+    },0)
+return result;
+}
