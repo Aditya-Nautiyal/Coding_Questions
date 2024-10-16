@@ -1,0 +1,4 @@
+const str1 = "AAKsha";
+const str2 = "aakash";
+const isAnagram = (a,b) => a.toLowerCase().split("").sort().join("") === b.toLowerCase().split("").sort().join("");
+console.log(isAnagram(str1,str2))

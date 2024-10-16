@@ -1,0 +1,6 @@
+Create an Anagram function.
+
+true : "aAkaSh" equal to "Aakash" 
+else
+false
+
