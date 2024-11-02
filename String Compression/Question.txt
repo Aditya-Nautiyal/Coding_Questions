@@ -1,0 +1,11 @@
+Given an array of characters chars, compress it so that:
+
+For each sequence of consecutive repeating characters:
+If a character repeats only once, keep it as is.
+If a character repeats multiple times, add the character followed by the count of its repeats.
+Update the chars array directly with the compressed version and return the new length of the array.
+Example: For chars = ["a", "a", "b", "b", "c", "c", "c"], the output should modify chars to ["a", "2", "b", "2", "c", "3"], and the function should return 6.
+
+Constraints:
+
+Use only constant extra space (no additional arrays or data structures).

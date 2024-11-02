@@ -1,0 +1,28 @@
+function compress(chars) {
+    let index = 0; // To keep track of the position in the chars array
+    let i = 0;     // To iterate over chars array
+
+    while (i < chars.length) {
+        let char = chars[i];
+        let count = 0;
+
+        // Count consecutive characters
+        while (i < chars.length && chars[i] === char) {
+            i++;
+            count++;
+        }
+
+        // Add character
+        chars[index++] = char;
+
+        // If count is more than 1, add it as well
+        if (count > 1) {
+            for (let c of count.toString()) {
+                chars[index++] = c;
+            }
+        }
+    }
+
+    // Modify the array in place and return the new length
+    return index;
+}
