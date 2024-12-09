@@ -1,0 +1,17 @@
+var merge = function (nums1, m, nums2, n) {
+    let currentIndex = m + n - 1; // Start from the end of nums1
+    let index1 = m - 1; // Last valid element in nums1
+    let index2 = n - 1; // Last valid element in nums2
+
+    // Start merging from the back
+    while (index2 >= 0) {
+        if (index1 >= 0 && nums1[index1] > nums2[index2]) {
+            nums1[currentIndex] = nums1[index1];
+            index1--;
+        } else {
+            nums1[currentIndex] = nums2[index2];
+            index2--;
+        }
+        currentIndex--;
+    }
+};
