@@ -1,0 +1,11 @@
+var removeDuplicates = function (nums) {
+    let insertionIndex = 0;
+    let len = nums.length;
+    for(let i=0;i<len;i++){
+        if(nums[i] !== nums[i-1]){
+            nums[insertionIndex] = nums[i];
+            insertionIndex++;
+        }
+    }
+    return insertionIndex;
+};
