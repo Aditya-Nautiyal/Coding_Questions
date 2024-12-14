@@ -1,0 +1,15 @@
+var majorityElement = function (nums) {
+    let majorityElement;
+    let majorityElementCount = 0;
+    for(let i=0; i< nums.length; i++){
+        if(majorityElementCount === 0){
+            majorityElement = nums[i];
+            majorityElementCount++;
+        } else if(nums[i] === majorityElement){
+            majorityElementCount++;
+        } else {
+            majorityElementCount--;
+        }
+    }
+    return majorityElement;
+};
