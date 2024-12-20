@@ -1,0 +1,25 @@
+
+var strStr = function(haystack, needle) {
+    const hayLength = haystack.length;
+    const needleLength = needle.length;
+    if(needleLength > hayLength)
+    {
+        return -1;
+    } else {
+        for(let i=0 ;i< hayLength; i++){
+            let counter = 0;
+            for(let j=0; j< needleLength; j++){
+                if(needle[j] === haystack[i+j]){
+                    counter++;
+                }else{
+                    break;
+                }
+            };
+            if(counter === needleLength){
+                return i;
+            }
+        };
+        return -1;
+    }
+    
+};
